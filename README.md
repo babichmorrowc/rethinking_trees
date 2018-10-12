@@ -58,3 +58,45 @@
 + Karl Popper's critique of induction - turkey problem
 + The hypothesis that minimizes independent origin of traits minimize ad hoc hypotheses
 + Parsimony minimizes ad hoc hypotheses of character change
+
+## Methodology
+
++ Optimality search criterion
+  + Maximum parsimony
+  + Maximum likelihood
+  + Bayesian inference
+  + Fitch-Margoliash
++ Clustering
+  + UPGMA
+  + Neighbor-joining
+  
+### Maximum Likelihood
+
+Maximum likelihood function maximizes the probability of finding the data when the parameters - tree topology and branch length - are given.
+
+### Bayesian Inference
+
+Often there are many trees with very similar likelihood values. Bayesian inference allows you to sample from high likelihood trees, which allows you to calculate the posterior probability of a node.
+
+## The Coalescent Model
+
+Assumptions:
++ Discrete non-overlapping generations
++ Every individual has the same chance of reproducing - no selection, neutral model
++ Constant population size
+
+P(2 individuals having the same parent) = 1/N, where N is the number of potential parents
+
+P(2 individuals having the same gene copies) = 1/N', where N' is the number of gene copies
+  
+  In a diploid population, P(2 individuals having the same gene copies) = 1/N
+  
+Population process in time has a tree-like structure since there is always the possibility that two individuals shared a parent somewhere in the past. The coalescent model describes the probability of two individuals finding a common ancestor in the past.
+
+P(2 individuals do NOT coalesce) = (1-1/N)^g, where g is the number of generations in the past
+
+You can use your gene trees to estimate the population size. If there are more genes, there are more possibilities of coalescence.
+
+P(2 individuals have the same parent) = 1/N * 1/N * N * kC2 = 1/N * 1/N * N * k!/\[2!(k-2)!\] = k(k-1)/2N, where k is the number of different alleles
+
+A coalescent event reduces the number of alleles in the population, which in turn reduces the probability of coalescence in the previous generations. This property of the model means that coalescent trees are top-heavy. Thus, you only need a few alleles to estimate the deep nodes of the gene trees.
