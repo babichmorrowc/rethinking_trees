@@ -17,6 +17,8 @@ library(phytools)
 #####                                                                         #####
 
 Ne.coal.prob <- function(Ne, ploidy)
+  #ploidy is number of gene copies for an individual
+  #Ne is population size
 {
   coal.pr<-NULL
   for(i in 1:length(Ne)){
@@ -30,8 +32,9 @@ Ne.coal.prob <- function(Ne, ploidy)
 pop.sizes <- c(100:500)
 
 prob<-Ne.coal.prob(Ne=pop.sizes, ploidy = 1)
-plot(prob, xlab="population size",xaxt = "n") 
+plot(prob, xlab="population size",xaxt = "n") +
      axis(1, at=c(0,length(prob)), labels=c(min(pop.sizes),max(pop.sizes)))
+#probability of coalescence decreases as population size increases
 
 ########################################################
      
@@ -52,6 +55,7 @@ plot(prob, xlab="population size",xaxt = "n")
      #### read the coalescent trees
      trees1 <- read.tree(text = sims1)
      trees2 <- read.tree(text = sims2)
+     #scale back to generation time
      for(i in 1:length(trees1))
        {
        trees1[[i]]$edge.length <- trees1[[i]]$edge.length*2*Ne1
@@ -62,7 +66,7 @@ plot(prob, xlab="population size",xaxt = "n")
        trees2[[i]]$edge.length <- trees2[[i]]$edge.length*2*Ne2
      }
      
-     ### tmrca of all genealogies
+     ### time to most recent common ancestor of all genealogies
      tmrca1 <- sapply(trees1, function(x) max(nodeHeights(x))) # em geracoes
      tmrca2 <- sapply(trees2, function(x) max(nodeHeights(x))) # em geracoes
      
