@@ -32,8 +32,29 @@
   + Idea of semaphorant: voucher specimen at a specific life stage
 + Tokogenetic (population) level relationships can be observed
   + Species-level relationships (phylogeny) must be inferred
-+ Henning auxiliary principle: states that are shared should be considered evidence of kinship
++ Hennig auxiliary principle: states that are shared should be considered evidence of kinship
   + Assume homology first
 + Synapomorphy: trait shared in species that originated in most recent common ancestor
 + Symplesiomorphy: trait present in distant ancestor and retained in some decendant clades
 + Adding more and more characters to a tree helps identify homoplasy (false homology)
+
+### The Fight for Methods: 60's-70's
+
+**Phenetics**
+
++ Raw similarity requires no assumptions about homology
++ Evolutionary rates nearly constant and raw similarity reflects ancestry
++ Used mathematic measurements of distance
++ Criticism - cannot deal with homoplasy
+
+**Cladistics**
+
++ Explains difference as result of change, regardless of the rate of change
++ Explains similarity as parallelism, convergence, or inheritance
+
+### The Fight for Methods: 70's to today
+
++ What phylogenies are more scientific? How do we choose the best tree?
++ Karl Popper's critique of induction - turkey problem
++ The hypothesis that minimizes independent origin of traits minimize ad hoc hypotheses
++ Parsimony minimizes ad hoc hypotheses of character change
