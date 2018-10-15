@@ -87,11 +87,12 @@ plot(prob, xlab="population size",xaxt = "n") +
      for(i in 1:10){
           plotTree(x[[i]], xlim=c(l[i], h[i]))
      }
+     #trees from larger population have longer coalescence
      dev.off()
      
      
 #################################
-     ### influence of the number of aleles in the probability of coalescence
+     ### influence of the number of alleles in the probability of coalescence
 
 al.coal.prob <- function(Ne, alleles, ploidy)
 {
